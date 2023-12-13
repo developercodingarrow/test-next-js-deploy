@@ -8,10 +8,13 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engines": {
+    "npm": "10.2.3"
+  },
   "dependencies": {
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.0.4"
+    "next": "latest"
   },
   "devDependencies": {
     "eslint": "^8",
