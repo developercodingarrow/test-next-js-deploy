@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "engines": {
-    "npm": "10.2.3"
+    "node": ">=18.18.0 <19.0.0"
   },
   "dependencies": {
     "react": "^18",
