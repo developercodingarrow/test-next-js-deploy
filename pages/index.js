@@ -15,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <h1>Saransh Realtors</h1>
+        <h1>Saransh Realtors change is file and update</h1>
       </main>
     </>
   );
