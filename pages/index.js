@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
@@ -6,6 +8,20 @@ import styles from "@/styles/Home.module.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+
+ const [message, setmessage] = useState("");
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await axios.get("http://13.201.99.72:8000/api/aws");
+        console.log(response.data); // Log the response data to the console
+        setmessage(response.data.status);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+    fetchData();
+  }, []);
   return (
     <>
       <Head>
@@ -16,6 +32,8 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <h1>Saransh Realtors change is file and update</h1>
+   <h1>hello Next js change</h1>
+        <h1>api message {message} </h1>
       </main>
     </>
   );
